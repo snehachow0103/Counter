@@ -1,0 +1,15 @@
+/* src/pages/NotFoundPage.css */
+.notfound-container {
+    text-align: center;
+    padding: 50px;
+    background: #fff3f3;
+  }
+  
+  .notfound-container h1 {
+    color: #e57373;
+  }
+  
+  .notfound-container p {
+    color: #757575;
+  }
+  
