@@ -1,16 +1,15 @@
-/* src/components/Counter.css */
 .Counter {
-    margin-top: 50px;
-  }
-  
-  .Counter button {
-    margin: 5px;
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  .Counter p {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
+  text-align: center;
+  margin-top: 50px;
+}
+
+.Counter button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.Counter p {
+  font-size: 24px;
+  font-weight: bold;
+}

@@ -1,12 +1,25 @@
 import React from 'react';
-import './App.css';       // Import the CSS file
-import Counter from './Components/Counter';  // Correct import path for Counter component
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import HomePage from './Pages/HomePage';
+import AboutPage from './Pages/AboutPage';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Counter />
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+        </nav>
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
