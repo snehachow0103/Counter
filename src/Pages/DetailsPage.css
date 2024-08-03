@@ -1,0 +1,33 @@
+/* src/pages/DetailsPage.css */
+.details-container {
+    text-align: center;
+    padding: 20px;
+    background: #e8f5e9;
+  }
+  
+  .header {
+    background: #43a047;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .header h1 {
+    margin: 0;
+  }
+  
+  .controls button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    background: #fff;
+    border: 2px solid #4caf50;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .controls button:hover {
+    background: #4caf50;
+    color: white;
+  }
+  
