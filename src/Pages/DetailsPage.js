@@ -1,35 +1,20 @@
-// src/pages/DetailsPage.js
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useLocation } from 'react-router-dom';
-import { increment, decrement, setCount } from '../Features/Counter/CounterSlice';
+import { increment, decrement } from '../Features/Counter/CounterSlice';
 import './DetailsPage.css';
 
-const DetailsPage = () => {
+const DetailPage = () => {
   const count = useSelector(state => state.counter.value);
   const dispatch = useDispatch();
-  const location = useLocation();
-
-  useEffect(() => {
-    const query = new URLSearchParams(location.search);
-    const initialCount = parseInt(query.get('count'), 10);
-    if (!isNaN(initialCount)) {
-      dispatch(setCount(initialCount));
-    }
-  }, [location, dispatch]);
 
   return (
-    <div className="details-container">
-      <header className="header">
-        <h1>Details Page</h1>
-        <p>Count: {count}</p>
-      </header>
-      <div className="controls">
-        <button onClick={() => dispatch(increment())}>+</button>
-        <button onClick={() => dispatch(decrement())}>-</button>
-      </div>
+    <div className="Page">
+      <h1>Detail Page</h1>
+      <p>Count: {count}</p>
+      <button onClick={() => dispatch(increment())}>+</button>
+      <button onClick={() => dispatch(decrement())}>-</button>
     </div>
   );
 };
 
-export default DetailsPage;
+export default DetailPage;

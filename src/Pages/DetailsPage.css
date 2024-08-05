@@ -1,33 +1,33 @@
-/* src/pages/DetailsPage.css */
-.details-container {
-    text-align: center;
+.Page {
     padding: 20px;
-    background: #e8f5e9;
-  }
-  
-  .header {
-    background: #43a047;
-    color: white;
-    padding: 20px;
+    background-color: #ccffcc; /* Pale green background for pages */
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
   }
   
-  .header h1 {
-    margin: 0;
+  .Page h1 {
+    color: #006600; /* Dark green text */
   }
   
-  .controls button {
+  .Page p {
+    font-size: 18px;
+    color: #004d00; /* Darker green text */
+  }
+  
+  .Page button {
     margin: 5px;
     padding: 10px;
     font-size: 16px;
-    background: #fff;
-    border: 2px solid #4caf50;
+    background-color: #66ff66; /* Light green buttons */
+    border: none;
     border-radius: 4px;
     cursor: pointer;
   }
   
-  .controls button:hover {
-    background: #4caf50;
-    color: white;
+  .Page button:hover {
+    background-color: #4dff4d; /* Darker green on hover */
   }
   
