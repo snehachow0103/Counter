@@ -1,33 +1,63 @@
-.Page {
-    padding: 20px;
-    background-color: #ccffcc; /* Pale green background for pages */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    width: 80%;
-    max-width: 600px;
-  }
-  
-  .Page h1 {
-    color: #006600; /* Dark green text */
-  }
-  
-  .Page p {
-    font-size: 18px;
-    color: #004d00; /* Darker green text */
-  }
-  
-  .Page button {
-    margin: 5px;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #66ff66; /* Light green buttons */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .Page button:hover {
-    background-color: #4dff4d; /* Darker green on hover */
-  }
-  
+.DetailsPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #ccffcc;
+  padding: 20px;
+}
+
+.counter-box {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.count {
+  font-size: 48px;
+  font-weight: bold;
+  color: #006600;
+  margin-bottom: 20px;
+}
+
+.counter-controls {
+  display: flex;
+  align-items: center;
+}
+
+.counter-btn {
+  margin: 0 20px;
+  padding: 20px;
+  font-size: 24px;
+  background-color: #006600; /* Dark green */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}
+
+.counter-btn:hover {
+  background-color: #004d00; /* Darker green */
+}
+
+.tic-tac-toe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* Adjust this value to lift the content upward */
+}
+
+.reset-btn {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #006600; /* Dark green */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}
+
+.reset-btn:hover {
+  background-color: #004d00; /* Darker green */
+}

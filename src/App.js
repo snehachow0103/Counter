@@ -1,8 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './Pages/HomePage';
 import AboutPage from './Pages/AboutPage';
-import DetailPage from './Pages/DetailsPage';
+import DetailsPage from './Pages/DetailsPage';
 import './App.css';
 
 function App() {
@@ -10,15 +10,14 @@ function App() {
     <Router>
       <div className="App">
         <nav>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/detail">Detail</Link>
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/details">Details</a>
         </nav>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/detail" element={<DetailPage />} />
-          <Route path="*" element={<div className="Page"><h1>404 Not Found</h1></div>} />
+          <Route path="/details" element={<DetailsPage />} />
         </Routes>
       </div>
     </Router>

@@ -1,28 +1,42 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement, setCount } from '../Features/Counter/CounterSlice';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './AboutPage.css';
-import { useLocation } from 'react-router-dom';
 
 const AboutPage = () => {
-  const count = useSelector(state => state.counter.value);
-  const dispatch = useDispatch();
+  const [count, setCount] = useState(0);
+  const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
-    const initialCount = parseInt(params.get('count'), 10);
-    if (!isNaN(initialCount)) {
-      dispatch(setCount(initialCount));
+    const countParam = params.get('count');
+    if (countParam) {
+      setCount(parseInt(countParam, 10));
     }
-  }, [location.search, dispatch]);
+  }, [location.search]);
+
+  const increment = () => {
+    const newCount = count + 1;
+    setCount(newCount);
+    navigate(`?count=${newCount}`);
+  };
+
+  const decrement = () => {
+    const newCount = count - 1;
+    setCount(newCount);
+    navigate(`?count=${newCount}`);
+  };
 
   return (
     <div className="Page">
       <h1>About Page</h1>
-      <p>Count: {count}</p>
-      <button onClick={() => dispatch(increment())}>+</button>
-      <button onClick={() => dispatch(decrement())}>-</button>
+      <div className="counter-box">
+        <h2>Counter: {count}</h2>
+        <div className="counter-buttons">
+          <button onClick={increment}>+</button>
+          <button onClick={decrement}>-</button>
+        </div>
+      </div>
     </div>
   );
 };

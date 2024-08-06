@@ -26,5 +26,15 @@ nav a {
 }
 
 nav a:hover {
-  color: #004d00; /* Darker green on hover */
+  text-decoration: underline;
+}
+
+.Page {
+  padding: 20px;
+  background-color: #ccffcc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
 }

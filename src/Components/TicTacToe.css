@@ -1,0 +1,24 @@
+.tic-tac-toe {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 10px;
+}
+
+.tic-tac-toe-cell {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 2px solid #006600; /* Dark green border */
+  cursor: pointer;
+  font-size: 36px;
+  color: #006600; /* Dark green text */
+}
+
+.tic-tac-toe-cell.filled {
+  pointer-events: none;
+  background-color: #e0f0e0; /* Light green */
+}

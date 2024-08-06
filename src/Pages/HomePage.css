@@ -1,33 +1,46 @@
-.Page {
-    padding: 20px;
-    background-color: #ccffcc; /* Pale green background for pages */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    width: 80%;
-    max-width: 600px;
-  }
-  
-  .Page h1 {
-    color: #006600; /* Dark green text */
-  }
-  
-  .Page p {
-    font-size: 18px;
-    color: #004d00; /* Darker green text */
-  }
-  
-  .Page button {
-    margin: 5px;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #66ff66; /* Light green buttons */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .Page button:hover {
-    background-color: #4dff4d; /* Darker green on hover */
-  }
-  
+.HomePage {
+  padding: 20px;
+  background-color: #ccffcc; /* Pale green background for pages */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+}
+
+.HomePage h1 {
+  color: #006600; /* Dark green text */
+}
+
+.counter-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counter-box h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #006600; /* Dark green text */
+  margin-bottom: 10px; /* Space between count and buttons */
+}
+
+.counter-buttons {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+.counter-buttons button {
+  margin: 0;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #004d00; /* Dark green button color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #ffffff; /* White text color for buttons */
+}
+
+.counter-buttons button:hover {
+  background-color: #006600; /* Slightly lighter green on hover */
+}
